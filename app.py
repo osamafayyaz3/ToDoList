@@ -35,7 +35,7 @@ def list_api(list_id):
     task = Taskes.query.get(list_id)
     print(task)
     if task is None:
-        return jsonify({"error": "Invalid flight_id"}), 422
+        return jsonify({"error": "Invalid list_id"}), 422
     actionList = task.action
     return jsonify(
         {

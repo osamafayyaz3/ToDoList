@@ -6,7 +6,7 @@
     <div class="input-group mb-3">
         <input class = "form-control input-sm" type="text" placeholder="Enter text..."  name="content" id="content">
         <div class="input-group-append">
-        <input type="submit" value="Add task">
+        <button type="submit" value="Add task" class="btn btn-primary">Add Task</button>
         </div>
         </div>
     </form>
@@ -20,7 +20,7 @@
 {% for task in taskes %}
     <tr>
         <td>{{task.action}}</td>
-        <td><a href="/delete/{{task.id}}"><button type="button" class="btn btn-outline-primary">Delete</button></a></td>
+        <td><a href="/delete/{{task.id}}"><button type="button" class="btn btn-danger">Delete</button></a></td>
     </tr>
     {% endfor %}
 </table>
